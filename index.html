@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Style/CDTStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body id="body" class="bg-light">
+    
+    
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand navbar-light bg-dark" id="nav">
+        <a class="navbar-brand text-light" href="#">Почетна</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link text-info navLink" href="Info.html">Информации за корона вирус</a>
+            <a class="nav-item nav-link text-info navLink" href="Precautions.html">Превентиви и Симптоми</a>
+          </div>
+        </div>
+        <div class="form-inline">
+            <input class="form-control mr-sm-2" type="text" placeholder="Побарај држава" aria-label="Search" id="countrySearch">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchBtn" onclick="generateCountryInfo()">Пребарај</button>
+        </div>
+        <div id="singleCountryContianer">
+
+        </div>
+      </nav>
+
+    <div>
+        <div id="headerContainer">
+            <div id="header">COVID-19 статистика</div>
+        </div>
+    
+        <div class="statisticContainer">
+            <div class="statisticHeader">Во Светот</div>
+            <div class="tableContainer">
+                <table class="statisticTable table table-dark" id="">
+                    <thead>
+                        <tr>
+                            <th class="statistickHead">Вкупно случаи</th>
+                            <th class="statistickHead">Денешни случаи</th>
+                            <th class="statistickHead">Починати</th>
+                            <th class="statistickHead">Денеска починати</th>
+                            <th class="statistickHead">Излечени</th>
+                            <th class="statistickHead">Критични</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="wwsRow">
+                            <td id="wwsCases" class="statisticValues"></td>
+                            <td id="wwsTodayCases" class="statisticValues"></td>
+                            <td id="wwsDeaths" class="statisticValues"></td>
+                            <td id="wwsTodayDeaths" class="statisticValues"></td>
+                            <td id="wwsRecovered" class="statisticValues"></td>
+                            <td id="wwsCritical" class="statisticValues"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <div class="statisticContainer">
+            <div class="statisticHeader">Во Македонија</div>
+            <div class="tableContainer">
+                <table class="statisticTable table table-dark">
+                    <thead>
+                        <tr>
+                            <th class="statistickHead">Вкупно случаи</th>
+                            <th class="statistickHead">Денешни случаи</th>
+                            <th class="statistickHead">Починати</th>
+                            <th class="statistickHead">Денеска починати</th>
+                            <th class="statistickHead">Излечени</th>
+                            <th class="statistickHead">Критични</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="wwsRow">
+                            <td id="mksCases" class="statisticValues"></td>
+                            <td id="mksTodayCases" class="statisticValues"></td>
+                            <td id="mksDeaths" class="statisticValues"></td>
+                            <td id="mksTodayDeaths" class="statisticValues"></td>
+                            <td id="mksRecovered" class="statisticValues"></td>
+                            <td id="mksCritical" class="statisticValues"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="countriesTableContainer">
+        <div id="allCountriesHeaderContainer">
+            <div id="allCountriesHeader">Остатокот од Светот</div>
+        </div>
+        <table class="statisticTable table table-striped table-dark" id="allCountriesTable">
+            <thead class="thead-light">
+                <tr id="trHead">
+                    <th scope="col" class="allCountriesStatisticHead">Држава</th>
+                    <th scope="col" class="allCountriesStatisticHead">Случаи</th>
+                    <th scope="col" class="allCountriesStatisticHead">Денешни случаи</th>
+                    <th scope="col" class="allCountriesStatisticHead">Починати</th>
+                    <th scope="col" class="allCountriesStatisticHead">Денеска починати</th>
+                    <th scope="col" class="allCountriesStatisticHead">Излечени</th>
+                    <th scope="col" class="allCountriesStatisticHead">Критични</th>
+                </tr>
+            </thead>
+            <tbody id="allCountriesTBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./Script/CDTScript.js"></script>
+</body>
+</html>

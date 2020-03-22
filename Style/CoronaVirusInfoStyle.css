@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+#btnContainer{
+    padding: 1%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+#generalInfoContainer{
+    width: 90%;
+    padding: 2%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#generalInfoContainer p{
+    font-size: 1.2em;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.spaceBetween{
+    margin-bottom: 1%;
+}
+
+
+
+/* Natasha */
+p{
+    text-align: justify;
+}
+
+#intro{
+    width:70%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px 5px 40px 5px;
+    margin-bottom: 4%;
+    padding:1%;
+}
+
+#intro p{
+    color: white;
+    font-size: 1.5em;
+}
+
+h2{
+    margin-left: 5%;
+    margin-top:2%;
+}
+
+.section{
+    display:flex;
+    justify-content:space-between;
+    width:90%;
+    margin-left:1%;
+    margin-top: 1%;
+}
+
+h3{
+    background-color: 	 #ffd480;
+    margin-left:3%;
+    margin-top:2%;
+    width: 70%;
+    padding:1%;
+    border-radius: 4px;
+}
+
+hr{
+    width: 90%;
+    margin-left:3%;
+}
+
+h5,h4{
+    margin-left:3%;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+#plus{
+    cursor:pointer;
+}
+
+.dropdown{
+    display:none;
+    width: 80%;
+    text-align: justify;
+    margin-left:3%;
+}

@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+#nav{
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+#alert{
+    height: 50%;
+}
+
+.navLink{
+    padding: 1%;
+    border: 1px solid rgb(0, 109, 128);
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.navLink:hover{
+    background-color: rgb(182, 182, 182);
+}
+
+#headerContainer{
+    text-align: center;
+    padding: 2%;
+}
+
+#header{
+    font-size: 200%;
+}
+
+.statisticContainer{
+    width: 70%;
+    background-color: #343a40;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px 5px 40px 5px;
+    margin-bottom: 4%;
+}
+
+.statisticHeader{
+    font-size: 200%;
+    font-weight: bolder;
+    padding: 1%;
+    color: #f8f9fa;
+}
+
+.tableContainer{
+    padding: 2%;
+}
+
+.statistickHead{
+    font-size: 120%;
+    font-weight: 400;
+    border-bottom: 1px solid black;
+}
+
+.statisticTable{
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+    table-layout: fixed;
+}
+
+.statisticValues{
+    font-size: 120%;
+}
+
+#countriesTableContainer{
+    padding: 1%;
+    margin: 0 auto;
+    text-align: center;
+    /* background-color: rgba(43, 42, 42, 0.247); */
+}
+
+#allCountriesHeaderContainer{
+    text-align: center;
+}
+
+#allCountriesHeader{
+    font-size: 2em;
+}
+
+.allCountriesStatisticHead{
+    /* width: 20%; */
+    font-size: 1.2em;
+}
+
+.countryTableRow{
+    border: 2px solid black;
+    padding: 2px 10px;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+/* Pop up classes ------------------- */
+.countryInfoContainer{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 10%;
+    width: 60%;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.932);
+}
+
+.countryHeader{
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    padding: 2%;
+}
+
+.countryTableHead{
+    /* border: 2px solid rgb(0, 0, 0); */
+    color: snow;
+    font-size: 50%;
+    font-weight: 300;
+    padding: 2px 10px;
+}
+
+.closeCountryInfo{
+    margin-bottom: 2%;
+}
+
+.popup{
+    padding: 10px;
+    background: whitesmoke;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 8px 8px 8px 0px;
+}
+
+
+@media only screen and (max-width : 1000px){
+    #header{
+        font-size: 1.2em;
+    }
+    .statisticContainer{
+        width: 100%;
+        background-color: #f8f9fa;
+        text-align: center;
+        margin-bottom: 4%;
+        border-radius: 0%;
+    }
+    .tableContainer{
+        padding: 0.5%;
+    }
+    .statistickHead{
+        font-size: 70%;
+    }
+    .statisticHeader{
+        font-size: 100%;
+        font-weight: bolder;
+        padding: 1%;
+        color: #343a40;
+    }
+    .statisticValues{
+        font-size: 70%;
+    }
+    .statisticTable{
+        text-align: center;
+        table-layout: auto;
+    }
+    #allCountriesHeader{
+        font-size: 1.1em;
+    }
+    .allCountriesStatisticHead{
+        font-size: 1em;
+    }
+    .countryTableRow{
+        padding: 2px 5px;
+        font-size: 80%;
+        font-weight: 300;
+    }
+    .countryInfoContainer{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 5%;
+        background-color: rgba(0, 0, 0, 0.932);
+    }
+    .countryHeader{
+        color: rgb(255, 255, 255);
+        font-size: 1.4em;
+        padding: 2%;
+    }
+    
+    .countryTableHead{
+        /* border: 2px solid rgb(0, 0, 0); */
+        color: snow;
+        font-size: 50%;
+        font-weight: 300;
+        padding: 2px 10px;
+    }
+}
+
+@media only screen and (max-width : 700px){
+    #header{
+        font-size: 1em;
+    }
+    .statisticContainer{
+        width: 100%;
+        background-color: #f8f9fa;
+        text-align: center;
+        margin-bottom: 4%;
+        border-radius: 0%;
+    }
+    .tableContainer{
+        padding: 0.5%;
+    }
+    .statistickHead{
+        font-size: 70%;
+    }
+    .statisticHeader{
+        font-size: 100%;
+        font-weight: bolder;
+        padding: 1%;
+        color: #343a40;
+    }
+    .statisticValues{
+        font-size: 70%;
+    }
+    .statisticTable{
+        text-align: center;
+        table-layout: auto;
+    }
+    #allCountriesHeader{
+        font-size: 1.1em;
+    }
+    .allCountriesStatisticHead{
+        font-size: 80%;
+    }
+    .countryTableRow{
+        padding: 2px 5px;
+        font-size: 60%;
+        font-weight: 300;
+    }
+    .countryInfoContainer{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 5%;
+        background-color: rgba(0, 0, 0, 0.932);
+    }
+    .countryHeader{
+        color: rgb(255, 255, 255);
+        font-size: 1.4em;
+        padding: 2%;
+    }
+    
+    .countryTableHead{
+        /* border: 2px solid rgb(0, 0, 0); */
+        color: snow;
+        font-size: 50%;
+        font-weight: 300;
+        padding: 2px 10px;
+    }
+}
+
+@media only screen and (max-width : 400px){
+    #header{
+        font-size: 1em;
+    }
+    .statisticContainer{
+        width: 100%;
+        background-color: #f8f9fa;
+        text-align: center;
+        margin-bottom: 4%;
+        border-radius: 0%;
+    }
+    .tableContainer{
+        padding: 0.5%;
+    }
+    .statistickHead{
+        font-size: 70%;
+    }
+    .statisticHeader{
+        font-size: 100%;
+        font-weight: bolder;
+        padding: 1%;
+        color: #343a40;
+    }
+    .statisticValues{
+        font-size: 70%;
+    }
+    .statisticTable{
+        text-align: center;
+        table-layout: auto;
+    }
+    #allCountriesHeader{
+        font-size: 1.1em;
+    }
+    .allCountriesStatisticHead{
+        font-size: 60%;
+    }
+    .countryTableRow{
+        padding: 2px 5px;
+        font-size: 50%;
+        font-weight: 300;
+    }
+    .countryInfoContainer{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 5%;
+        background-color: rgba(0, 0, 0, 0.932);
+    }
+    .countryHeader{
+        color: rgb(255, 255, 255);
+        font-size: 1.4em;
+        padding: 2%;
+    }
+    
+    .countryTableHead{
+        /* border: 2px solid rgb(0, 0, 0); */
+        color: snow;
+        font-size: 50%;
+        font-weight: 300;
+        padding: 2px 10px;
+    }
+}
+
