@@ -140,8 +140,13 @@
     border-radius: 8px 8px 8px 0px;
 }
 
-
 @media only screen and (max-width : 1000px){
+    #countrySearch{
+        width: 100px;
+    }
+    a{
+        font-size: 0.7em;
+    }
     #header{
         font-size: 1.2em;
     }
