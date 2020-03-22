@@ -141,7 +141,7 @@
 }
 
 
-@media only screen and (max-width : 1000px){
+@media only screen and (max-width : 1080px){
     #countrySearch{
         width: 100px;
     }
@@ -175,7 +175,8 @@
     }
     .statisticTable{
         text-align: center;
-        table-layout: auto;
+        table-layout: fixed;
+        font-size: 0.8em;
     }
     #allCountriesHeader{
         font-size: 1.1em;
