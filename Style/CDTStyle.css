@@ -140,12 +140,13 @@
     border-radius: 8px 8px 8px 0px;
 }
 
+
 @media only screen and (max-width : 1000px){
     #countrySearch{
         width: 100px;
     }
-    a{
-        font-size: 0.7em;
+    #nav{
+        font-size: 0.8em;
     }
     #header{
         font-size: 1.2em;
@@ -174,86 +175,89 @@
     }
     .statisticTable{
         text-align: center;
+        table-layout: auto;
+    }
+    #allCountriesHeader{
+        font-size: 1.1em;
+    }
+    .allCountriesStatisticHead{
+        font-size: 1em;
+    }
+    .countryTableRow{
+        padding: 2px 5px;
+        font-size: 80%;
+        font-weight: 300;
+    }
+    .countryInfoContainer{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        margin-top: 5%;
+        background-color: rgba(0, 0, 0, 0.932);
+    }
+    .countryHeader{
+        color: rgb(255, 255, 255);
+        font-size: 1.4em;
+        padding: 2%;
+    }
+    
+    .countryTableHead{
+        /* border: 2px solid rgb(0, 0, 0); */
+        color: snow;
+        font-size: 50%;
+        font-weight: 300;
+        padding: 2px 10px;
+    }
+}
+
+@media only screen and (max-width : 700px){
+    #countrySearch{
+        width: 70px;
+    }
+    #nav{
+        font-size: 0.6em;
+    }
+    #header{
+        font-size: 1em;
+    }
+    .statisticContainer{
+        width: 100%;
+        background-color: #f8f9fa;
+        text-align: center;
+        margin-bottom: 4%;
+        border-radius: 0%;
+    }
+    .tableContainer{
+        padding: 0.5%;
+    }
+    .statistickHead{
+        font-size: 70%;
+    }
+    .statisticHeader{
+        font-size: 100%;
+        font-weight: bolder;
+        padding: 1%;
+        color: #343a40;
+    }
+    .statisticValues{
+        font-size: 70%;
+    }
+    .statisticTable{
+        text-align: center;
+        table-layout: fixed;
         font-size: 0.7em;
     }
-    /* #allCountriesHeader{
-        font-size: 1.1em;
-    }
-    .allCountriesStatisticHead{
-        font-size: 80%;
-    } */
-    .countryTableRow{
-        padding: 2px 5px;
-        font-size: 80%;
-        font-weight: 300;
-    }
-    .countryInfoContainer{
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        top: 10%;
-        width: 100%;
-        text-align: center;
-        border-radius: 20px;
-        margin-top: 5%;
-        background-color: rgba(0, 0, 0, 0.932);
-    }
-    .countryHeader{
-        color: rgb(255, 255, 255);
-        font-size: 1.4em;
-        padding: 2%;
-    }
-    
-    .countryTableHead{
-        /* border: 2px solid rgb(0, 0, 0); */
-        color: snow;
-        font-size: 50%;
-        font-weight: 300;
-        padding: 2px 10px;
-    }
-
-}
-
-@media only screen and (max-width : 700px){
-    #countrySearch{
-        width: 50px;
-    }
-    #header{
-        font-size: 1em;
-    }
-    .statisticContainer{
-        width: 100%;
-        background-color: #f8f9fa;
-        text-align: center;
-        margin-bottom: 4%;
-        border-radius: 0%;
-    }
-    .tableContainer{
-        padding: 0.5%;
-    }
-    .statistickHead{
-        font-size: 70%;
-    }
-    .statisticHeader{
-        font-size: 100%;
-        font-weight: bolder;
-        padding: 1%;
-        color: #343a40;
-    }
-    .statisticValues{
-        font-size: 70%;
-    }
-    .statisticTable{
-        text-align: center;
-        table-layout: fixed;
-    }
     #allCountriesHeader{
         font-size: 1.1em;
     }
     .allCountriesStatisticHead{
-        font-size: 60%;
+        font-size: 80%;
     }
     .countryTableRow{
         padding: 2px 5px;
@@ -288,10 +292,7 @@
     }
 }
 
-@media only screen and (max-width : 400px){
-    #nav{
-        font-size: 0.2em;
-    }
+@media only screen and (max-width : 500px){
     #header{
         font-size: 1em;
     }
@@ -320,10 +321,12 @@
     .statisticTable{
         text-align: center;
         table-layout: fixed;
-        font-size: 0.4em;
     }
     #allCountriesHeader{
         font-size: 1.1em;
+    }
+    .allCountriesStatisticHead{
+        font-size: 60%;
     }
     .countryTableRow{
         padding: 2px 5px;
