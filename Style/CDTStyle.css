@@ -174,14 +174,14 @@
     }
     .statisticTable{
         text-align: center;
-        table-layout: auto;
+        font-size: 0.7em;
     }
-    #allCountriesHeader{
+    /* #allCountriesHeader{
         font-size: 1.1em;
     }
     .allCountriesStatisticHead{
-        font-size: 1em;
-    }
+        font-size: 80%;
+    } */
     .countryTableRow{
         padding: 2px 5px;
         font-size: 80%;
@@ -213,9 +213,13 @@
         font-weight: 300;
         padding: 2px 10px;
     }
+
 }
 
 @media only screen and (max-width : 700px){
+    #countrySearch{
+        width: 50px;
+    }
     #header{
         font-size: 1em;
     }
@@ -243,13 +247,13 @@
     }
     .statisticTable{
         text-align: center;
-        table-layout: auto;
+        table-layout: fixed;
     }
     #allCountriesHeader{
         font-size: 1.1em;
     }
     .allCountriesStatisticHead{
-        font-size: 80%;
+        font-size: 60%;
     }
     .countryTableRow{
         padding: 2px 5px;
@@ -285,6 +289,9 @@
 }
 
 @media only screen and (max-width : 400px){
+    #nav{
+        font-size: 0.2em;
+    }
     #header{
         font-size: 1em;
     }
@@ -312,13 +319,11 @@
     }
     .statisticTable{
         text-align: center;
-        table-layout: auto;
+        table-layout: fixed;
+        font-size: 0.4em;
     }
     #allCountriesHeader{
         font-size: 1.1em;
-    }
-    .allCountriesStatisticHead{
-        font-size: 60%;
     }
     .countryTableRow{
         padding: 2px 5px;
