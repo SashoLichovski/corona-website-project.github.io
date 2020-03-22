@@ -293,6 +293,9 @@
 }
 
 @media only screen and (max-width : 500px){
+    #nav{
+        font-size: 0.4em;
+    }
     #header{
         font-size: 1em;
     }
