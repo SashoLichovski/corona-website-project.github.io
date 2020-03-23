@@ -18,11 +18,11 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
     let week6 = 0;
     let week7 = 0;
     let week8 = 0;
-    function generateGraph(countryName){
+    function generateGraph(countryName,timelineOption){
         for (let i = 0; i < data.length; i++) {
             if (data[i].country == countryName) {
                 countryObject = data[i];
-                var infectedArr = Object.values(countryObject.timeline.cases);
+                var infectedArr = Object.values(countryObject.timeline[timelineOption]);
                 week1 = parseInt(infectedArr[6]);
                 week2 = parseInt(infectedArr[13]);
                 week3 = parseInt(infectedArr[20]);
@@ -70,7 +70,7 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
             }
         });
     }
-    generateGraph('north macedonia');
+    generateGraph('north macedonia','cases');
 
     // debugger;
     
