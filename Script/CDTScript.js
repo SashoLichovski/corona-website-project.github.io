@@ -1,17 +1,3 @@
-axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
-    headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    }
-})
-.then((response) => {
-    let data = JSON.parse(response.data);
-    console.log(data);
-})
-.catch(error => {
-    console.log(error)
-});
-
 // Overview for each country
 axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
     headers: {
