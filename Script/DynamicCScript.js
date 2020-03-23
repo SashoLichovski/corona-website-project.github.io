@@ -9,6 +9,12 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
     let data = JSON.parse(response.data);
     console.log(data);
 
+    // function calculateWeeklyInfected(no1, no2){
+    //     let sum;
+    //     sum = no2 - no1;
+    //     return sum;
+    // }
+
     let countryObject;
     let week1 = 0;
     let week2 = 0;
@@ -24,17 +30,21 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
                 countryObject = data[i];
                 var infectedArr = Object.values(countryObject.timeline[timelineOption]);
                 week1 = parseInt(infectedArr[6]);
-                week2 = parseInt(infectedArr[13]);
-                week3 = parseInt(infectedArr[20]);
-                week4 = parseInt(infectedArr[27]);
-                week5 = parseInt(infectedArr[33]);
-                week6 = parseInt(infectedArr[40]);
-                week7 = parseInt(infectedArr[47]);
-                week8 = parseInt(infectedArr[infectedArr.length-1]);
+                week2 = parseInt(infectedArr[13]) - parseInt(infectedArr[6]); 
+                week3 = parseInt(infectedArr[20]) - parseInt(infectedArr[13]);
+                week4 = parseInt(infectedArr[27]) - parseInt(infectedArr[20]);
+                week5 = parseInt(infectedArr[34]) - parseInt(infectedArr[27]);
+                week6 = parseInt(infectedArr[41]) - parseInt(infectedArr[34]);
+                week7 = parseInt(infectedArr[48]) - parseInt(infectedArr[41]);
+                week8 = parseInt(infectedArr[infectedArr.length-1]) - parseInt(infectedArr[48]);
                 break;
             }
         }
-        let infectedChartElement = document.getElementById('infectedChart').getContext('2d');
+        let chartContainer = document.getElementById('chartContainer');
+        let infectedChartElement = document.createElement('canvas');
+        infectedChartElement.id = 'infectedChart';
+        chartContainer.appendChild(infectedChartElement);
+        infectedChartElement.getContext('2d');
         let infectedChart = new Chart(infectedChartElement, {
             type: 'bar',
             data:{
@@ -79,10 +89,10 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
     let graphSearchValue;
     graphSearch.onkeypress = function(event){
         if (event.keyCode == 13) {
-            let infectedChartElement = document.getElementById('infectedChart');
-            // infectedChartElement.remove();
+            let chartContainer = document.getElementById('infectedChart');
+            chartContainer.remove();
             graphSearchValue = graphSearch.value;
-            generateGraph(graphSearchValue);
+            generateGraph(graphSearchValue, 'cases');
         }
     }
 })
