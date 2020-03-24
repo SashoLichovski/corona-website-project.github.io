@@ -9,6 +9,7 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
     let data = JSON.parse(response.data);
     console.log(data);
 
+    // Bar char for each country on search (default chart is for Mk)
     let countryObject;
     let infectedWeek1 = 0;let infectedWeek2 = 0;let infectedWeek3 = 0;let infectedWeek4 = 0;let infectedWeek5 = 0;let infectedWeek6 = 0;let infectedWeek7 = 0;let infectedWeek8 = 0;
     let recoveredWeek1 = 0;let recoveredWeek2 = 0;let recoveredWeek3 = 0;let recoveredWeek4 = 0;let recoveredWeek5 = 0;let recoveredWeek6 = 0;let recoveredWeek7 = 0;let recoveredWeek8 = 0;
@@ -65,7 +66,6 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
             }
         }
     }
-
     function generateGraph(countryName){
         setInfectedValues(countryName);
         setRecoveredValues(countryName);
@@ -98,7 +98,7 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
                     borderColor:'grey',
                     hoverBorderWidth:3,
                     hoverBorderColor:'black',
-                    fill:false
+                    fill:true
                 },{
                     label:'Recovered',
                     data:[
@@ -115,7 +115,8 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
                     borderWidth:1,
                     borderColor:'grey',
                     hoverBorderWidth:3,
-                    hoverBorderColor:'black'
+                    hoverBorderColor:'black',
+                    fill:false
                 },{
                     label:'Deaths',
                     data:[
@@ -132,7 +133,8 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
                     borderWidth:1,
                     borderColor:'grey',
                     hoverBorderWidth:3,
-                    hoverBorderColor:'black'
+                    hoverBorderColor:'black',
+                    fill:false
                 }]
             },
             options:{
@@ -149,11 +151,6 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
     }
     generateGraph('north macedonia');
     
-    
-
-    // debugger;
-    
-
     let graphSearch = document.getElementById('countryGraphSearch');
     let graphSearchValue;
     let chartContainer = document.getElementById('infectedChart');
@@ -165,6 +162,7 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
             graphSearch.value = '';
         }
     }
+     
 })
 .catch(error => {
     console.log(error)

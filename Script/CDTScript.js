@@ -123,6 +123,100 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
         }
         header = [];
     }
+
+    //Top 5 infected countries
+    let china; 
+    let italy; 
+    let usa;  
+    let spain; 
+    let germany;
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].country == 'China') {
+            china = data[i];
+        }else if(data[i].country == 'Italy'){
+            italy = data[i];
+        }else if(data[i].country == 'USA'){
+            usa = data[i];
+        }else if(data[i].country == 'Spain'){
+            spain = data[i];
+        }else if(data[i].country == 'Germany'){
+            germany = data[i];
+        }                    
+    }
+    let radarContainer = document.getElementById('redarContainer');
+    let radarElementInfected = document.createElement('canvas');
+    radarContainer.appendChild(radarElementInfected);
+    radarElementInfected.getContext('2d');
+    //Infected
+    let radarInfectedChart = new Chart(radarElementInfected, {
+        type:'polarArea',
+        data:{
+            labels:['Infected in China','Infected in Italy', 'Infected in USA', 'Infected in Spain', 'Infected in Germany'],
+            datasets:[{
+                label:'Infected',
+                backgroundColor:['rgba(0, 0, 255, 0.5)','rgba(0, 32, 255, 0.5)','rgba(0, 64, 255, 0.5)','rgba(0, 96, 255, 0.5)','rgba(0, 129, 255, 0.5)'],
+                data:[
+                    china.cases,
+                    italy.cases,
+                    usa.cases,
+                    spain.cases,
+                    germany.cases
+                ]
+            }]
+        },
+        options:{
+            title:{
+                display:true,
+                text:`Top 5 infected countries`,
+                fontSize:25
+            },
+            legend:{
+                position:'top'
+            }
+        }
+    })
+    //Recovered
+    let radarElementRecovered = document.createElement('canvas');
+    radarContainer.appendChild(radarElementRecovered);
+    radarElementRecovered.getContext('2d');
+    let radarRecoveredChart = new Chart(radarElementRecovered, {
+        type:'polarArea',
+        data:{
+            labels:['Recovered in China','Recovered in Italy', 'Recovered in USA', 'Recovered in Spain', 'Recovered in Germany'],
+            datasets:[{
+                label:'Infected',
+                backgroundColor:['rgba(0, 255, 0, 0.5)','rgba(0, 255, 32, 0.5)','rgba(0, 255, 64, 0.5)','rgba(0, 255, 96, 0.5)','rgba(0, 255, 129, 0.5)'],
+                data:[
+                    china.recovered,
+                    italy.recovered,
+                    usa.recovered,
+                    spain.recovered,
+                    germany.recovered
+                ]
+            }]
+        }
+    })
+    //Deaths
+    let radarElementDeaths = document.createElement('canvas');
+    radarContainer.appendChild(radarElementDeaths);
+    radarElementDeaths.getContext('2d');
+    let radarDeathsChart = new Chart(radarElementDeaths, {
+        type:'polarArea',
+        data:{
+            labels:['Deaths in China','Deaths in Italy', 'Deaths in USA', 'Deaths in Spain', 'Deaths in Germany'],
+            datasets:[{
+                label:'Infected',
+                backgroundColor:['rgba(255, 0, 0, 0.5)','rgba(255, 0, 32, 0.5)','rgba(255, 0, 64, 0.5)','rgba(255, 0, 96, 0.5)','rgba(255, 0, 129, 0.5)'],
+                data:[
+                    china.deaths,
+                    italy.deaths,
+                    usa.deaths,
+                    spain.deaths,
+                    germany.deaths
+                ]
+            }]
+        }
+    })
 })
 .catch(error => {
     console.log(error)
