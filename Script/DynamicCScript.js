@@ -11,9 +11,9 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
 
     // Bar char for each country on search (default chart is for Mk)
     let countryObject;
-    let infectedWeek1 = 0;let infectedWeek2 = 0;let infectedWeek3 = 0;let infectedWeek4 = 0;let infectedWeek5 = 0;let infectedWeek6 = 0;let infectedWeek7 = 0;let infectedWeek8 = 0;
-    let recoveredWeek1 = 0;let recoveredWeek2 = 0;let recoveredWeek3 = 0;let recoveredWeek4 = 0;let recoveredWeek5 = 0;let recoveredWeek6 = 0;let recoveredWeek7 = 0;let recoveredWeek8 = 0;
-    let deathsWeek1 = 0;let deathsWeek2 = 0;let deathsWeek3 = 0;let deathsWeek4 = 0;let deathsWeek5 = 0;let deathsWeek6 = 0;let deathsWeek7 = 0;let deathsWeek8 = 0;
+    let infectedWeek1 = 0;let infectedWeek2 = 0;let infectedWeek3 = 0;let infectedWeek4 = 0;let infectedWeek5 = 0;let infectedWeek6 = 0;let infectedWeek7 = 0;let infectedWeek8 = 0;let infectedWeek9;
+    let recoveredWeek1 = 0;let recoveredWeek2 = 0;let recoveredWeek3 = 0;let recoveredWeek4 = 0;let recoveredWeek5 = 0;let recoveredWeek6 = 0;let recoveredWeek7 = 0;let recoveredWeek8 = 0;let recoveredWeek9;
+    let deathsWeek1 = 0;let deathsWeek2 = 0;let deathsWeek3 = 0;let deathsWeek4 = 0;let deathsWeek5 = 0;let deathsWeek6 = 0;let deathsWeek7 = 0;let deathsWeek8 = 0;let deathsWeek;
 
     function setInfectedValues(countryName){
         for (let i = 0; i < data.length; i++) {
@@ -80,7 +80,7 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
         let infectedChart = new Chart(infectedChartElement, {
             type: 'bar',
             data:{
-                labels:['Jan 22 - Jan 29', 'Jan 30 - Feb 06', 'Feb 7 - Feb 14', 'Feb 15 - Feb 22', 'Feb 23 - Mar 01', 'Mar 02 - Mar 09', 'Mar 10 - Mar 17', 'Mar 17 - Today'],
+                labels:['Jan 22 - Jan 29', 'Jan 30 - Feb 06', 'Feb 7 - Feb 14', 'Feb 15 - Feb 22', 'Feb 23 - Mar 01', 'Mar 02 - Mar 09', 'Mar 10 - Mar 17', 'Mar 17 - Mar 23'],
                 datasets:[{
                     label:'Infected',
                     data:[

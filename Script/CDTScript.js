@@ -185,7 +185,7 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
             labels:['Recovered in China','Recovered in Italy', 'Recovered in USA', 'Recovered in Spain', 'Recovered in Germany'],
             datasets:[{
                 label:'Infected',
-                backgroundColor:['rgba(0, 255, 0, 0.5)','rgba(0, 255, 32, 0.5)','rgba(0, 255, 64, 0.5)','rgba(0, 255, 96, 0.5)','rgba(0, 255, 129, 0.5)'],
+                backgroundColor:['rgba(0, 255, 0, 0.5)','rgba(0, 225, 0, 0.5)','rgba(0, 195, 0, 0.5)','rgba(0, 165, 0, 0.5)','rgba(0, 135, 0, 0.5)'],
                 data:[
                     china.recovered,
                     italy.recovered,
@@ -194,6 +194,16 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
                     germany.recovered
                 ]
             }]
+        },
+        options:{
+            title:{
+                display:true,
+                text:`Recovered`,
+                fontSize:25
+            },
+            legend:{
+                position:'top'
+            }
         }
     })
     //Deaths
@@ -215,6 +225,16 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
                     germany.deaths
                 ]
             }]
+        },
+        options:{
+            title:{
+                display:true,
+                text:`Deaths`,
+                fontSize:25
+            },
+            legend:{
+                position:'top'
+            }
         }
     })
 })
