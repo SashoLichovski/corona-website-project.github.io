@@ -49,7 +49,7 @@ axios.get('https://covid-ca.azurewebsites.net/api/covid/countries', {
     // Getting MK statistics
     let mkStatisticInfo;
     for (let i = 0; i < data.length; i++) {
-        if (data[i].country == 'North Macedonia') {
+        if (data[i].country == 'Macedonia, the former Yugoslav Republic of') {
             mkStatisticInfo = data[i]
             break;
         }

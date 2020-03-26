@@ -68,7 +68,7 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
     }
     function generateGraph(countryName){
         setInfectedValues(countryName);
-        setRecoveredValues(countryName);
+        // setRecoveredValues(countryName);
         setDeathsValues(countryName);
 
         let chartContainer = document.getElementById('chartContainer');
@@ -99,25 +99,27 @@ axios.get(`https://covid-ca.azurewebsites.net/api/covid/history`,{
                     hoverBorderWidth:3,
                     hoverBorderColor:'black',
                     fill:true
-                },{
-                    label:'Recovered',
-                    data:[
-                        recoveredWeek1,
-                        recoveredWeek2,
-                        recoveredWeek3,
-                        recoveredWeek4,
-                        recoveredWeek5,
-                        recoveredWeek6,
-                        recoveredWeek7,
-                        recoveredWeek8,
-                    ],
-                    backgroundColor: 'green',
-                    borderWidth:1,
-                    borderColor:'grey',
-                    hoverBorderWidth:3,
-                    hoverBorderColor:'black',
-                    fill:false
-                },{
+                }
+                // ,{
+                //     label:'Recovered',
+                //     data:[
+                //         recoveredWeek1,
+                //         recoveredWeek2,
+                //         recoveredWeek3,
+                //         recoveredWeek4,
+                //         recoveredWeek5,
+                //         recoveredWeek6,
+                //         recoveredWeek7,
+                //         recoveredWeek8,
+                //     ],
+                //     backgroundColor: 'green',
+                //     borderWidth:1,
+                //     borderColor:'grey',
+                //     hoverBorderWidth:3,
+                //     hoverBorderColor:'black',
+                //     fill:false
+                // }
+                ,{
                     label:'Deaths',
                     data:[
                         deathsWeek1,
